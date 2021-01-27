@@ -2,8 +2,8 @@
 import rpyc
 import datetime
 
-# AD_SERVER_IP = '172.21.96.33'
-AD_SERVER_IP = '172.16.100.81'
+AD_SERVER_IP = '172.21.96.33'
+# AD_SERVER_IP = '172.16.100.81'
 AD_BOT_PORT = 19961
 domain_controller = 'DC=pyad01,DC=local'
 users_ou = 'OU=All,OU=Employee,{}'.format(domain_controller)
@@ -91,7 +91,7 @@ def manage_user(username, mode):
 # Change user password
 
 
-def user_password_change(username, new_password):
+def pword_change(username, new_password):
     """
     This function can change active directory password
     :param new_password:
