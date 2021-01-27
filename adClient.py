@@ -4,9 +4,9 @@ import datetime
 AD_SERVER_IP = '172.21.96.33'
 # AD_SERVER_IP = '172.16.100.81'
 AD_BOT_PORT = 19961
-domain_controller = 'DC=pyad01,DC=local'
-users_ou = 'OU=All,OU=Employee,{}'.format(domain_controller)
-groups_ou = 'OU=Employee_Groups,{}'.format(domain_controller)
+DOMAIN_CONTROLLER = 'DC=pyad01,DC=local'
+users_ou = 'OU=All,OU=Employee,{}'.format(DOMAIN_CONTROLLER)
+groups_ou = 'OU=Employee_Groups,{}'.format(DOMAIN_CONTROLLER)
 
 
 def send_command(command):
@@ -164,10 +164,10 @@ def user_info(username):
     cmd = 'net user ' \
           '{} ' \
           ''.format(
-        username
-    )
+            username
+            )
 
-    # Coninue writing this function...
+    # Continue writing this function...
 
     pass
 
