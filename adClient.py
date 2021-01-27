@@ -2,7 +2,8 @@
 import rpyc
 import datetime
 
-AD_SERVER_IP = '172.22.1.17'
+# AD_SERVER_IP = '172.21.96.33'
+AD_SERVER_IP = '172.16.100.81'
 AD_BOT_PORT = 19961
 domain_controller = 'DC=pyad01,DC=local'
 users_ou = 'OU=All,OU=Employee,{}'.format(domain_controller)
@@ -16,7 +17,8 @@ def send_command(command):
         connection = rpyc.connect(AD_SERVER_IP, AD_BOT_PORT)
         connection.root.run_command(command)
     except Exception as Err:
-        print('Error in send command', str(Err))
+        print('Error in send command: ', str(Err))
+        print('Check Server IP and Port...')
 
 
 def create_user(username, employee_id, display_name,  active=False):
@@ -160,6 +162,7 @@ def user_info(username):
     
     pass
 
+# The line below is for testing only
 
 create_user("dmurray", "123456", "Deandre Murray")
 

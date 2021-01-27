@@ -1,11 +1,11 @@
 
 import argparse
-import datetime
+from datetime import datetime
 import rpyc
 from rpyc.utils.server import ThreadedServer
 import subprocess
 
-date_time = datetime.datetime.now()
+date_time = datetime.now().strftime('%a %b %d, %Y %I:%M %p')
 
 
 class MonitorService(rpyc.Service):

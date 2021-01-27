@@ -1,0 +1,9 @@
+Changes to adBOT.py:
+
+    Cleaned up the printed date & time from **datetime
+        Added day of the week, Month, AM\PM,
+
+Changes to AdOperations.py"
+
+    Created functions to call for each Mass update from CSV
+
