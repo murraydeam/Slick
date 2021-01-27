@@ -1,4 +1,3 @@
-
 import rpyc
 import datetime
 
@@ -21,7 +20,7 @@ def send_command(command):
         print('Check Server IP and Port...')
 
 
-def create_user(username, employee_id, display_name,  active=False):
+def create_user(username, employee_id, display_name, active=False):
     """
     Create New user in AD
     :param username:
@@ -68,6 +67,7 @@ def create_user(username, employee_id, display_name,  active=False):
                 )
     send_command(command)
 
+
 # Manage existing user account
 
 
@@ -88,6 +88,7 @@ def manage_user(username, mode):
         cmd = 'dsrm -noprompt "cn={},{}"'.format(username, users_ou)
     send_command(cmd)
 
+
 # Change user password
 
 
@@ -98,9 +99,17 @@ def pword_change(username, new_password):
     :param username:
     :return:
     """
-    dn = 'CN={},{}'.format(username, users_ou)
-    cmd = 'dsmod user {} -pwd {}'.format(dn, new_password)
-    send_command(cmd)
+    new_pword = input("Enter a general password for this user..\n"
+                      "If you would like to use the default Password leave blank and hit enter... ")
+    if new_pword is None:
+        dn = 'CN={},{}'.format(username, users_ou)
+        cmd = 'dsmod user {} -pwd {}'.format(dn, new_password)
+        send_command(cmd)
+    else:
+        dn = 'CN={},{}'.format(username, users_ou)
+        cmd = 'dsmod user {} -pwd {}'.format(dn, new_password)
+        send_command(cmd)
+
 
 # Change AD group
 
@@ -120,6 +129,7 @@ def ad_group(group_name, mode):
     elif mode == 'remove':
         cmd = 'dsrm -noprompt "cn={},{}"'.format(group_name, groups_ou)
     send_command(cmd)
+
 
 # Change AD user to a new Group
 
@@ -154,15 +164,14 @@ def user_info(username):
     cmd = 'net user ' \
           '{} ' \
           ''.format(
-            username
-            )
-            
-            
-# Coninue writing this function...
-    
+        username
+    )
+
+    # Coninue writing this function...
+
     pass
+
 
 # The line below is for testing only
 
 create_user("dmurray", "123456", "Deandre Murray")
-
