@@ -25,7 +25,6 @@ class MassBot:
                 print(username, employee_id, official_name)
                 adClient.manage_user(username, mode=mode)
 
-
     def pword(self):
         with open('MOCK_DATA.csv', mode='r') as csv_file:
             csv_reader = csv.DictReader(csv_file)
