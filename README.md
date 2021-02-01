@@ -2,6 +2,28 @@ CLONE --VFXPIPELINE-- CLONE
 
 All Changes made by me will be submitted to then be added to the source code
 
+# New preperation for deployment and ease of use.
+
+# 1 Adding existing fuctions to AdOperations.py
+
+# 2 Adding additional arguments/functinality to adClient.py
+
+----------------------------------------------------------------------------------------------------
+
+# Upcoming 
+
+Simple UI starting with adClient.create_user
+
+
+
+
+
+
+
+
+
+# Below is the Orginal Readme.md
+
 # AutomateActiveDirectory
 Automate Active Directory by Python
 
