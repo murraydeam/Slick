@@ -173,7 +173,7 @@ def user_info(username):
 
     # Continue writing this function...
 
-    pass
+    send_command(cmd)
 
 
 # The line below is for testing only

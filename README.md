@@ -12,7 +12,7 @@ All Changes made by me will be submitted to then be added to the source code
 
 # Upcoming 
 
-Simple UI starting with adClient.create_user
+Web Client
 
 
 
@@ -23,22 +23,6 @@ Simple UI starting with adClient.create_user
 
 
 # Below is the Orginal Readme.md
-
-# AutomateActiveDirectory
-Automate Active Directory by Python
-
-Checkout full video tutorials
-https://www.youtube.com/playlist?list=PLYf4Vz9V1ESqob7r-nme7dOruKD-NS9lw
-In this video series I will show you how you can automate active directory operations by python.
-
-Subscribe VFX Pipeline channel to stay tune.
-https://www.youtube.com/vfxpipeline
-
-Like VFX Pipeline on Facebook
-https://www.facebook.com/vfxpipeline
-
-Download Free Source Codes from GitHub
-https://www.github.com/vfxpipeline 
 
 Automate Active Directory #1 Introduction
 
