@@ -1,4 +1,7 @@
-
+"""
+# 1 Format Date and Time for Server Side
+# 2
+"""
 import argparse
 from datetime import datetime
 import rpyc
